@@ -1,5 +1,5 @@
 <template>
-  <div class="main bg-dark">
+  <div class="main bg-light">
     <h2>Main</h2>
   </div>
 </template>

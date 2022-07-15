@@ -75,9 +75,4 @@ $height: 91vh;
   height: $height;
   transition: all 0.5s;
 }
-
-.el-menu--collapsed {
-  width: 70px;
-  height: 100% !important;
-}
 </style>

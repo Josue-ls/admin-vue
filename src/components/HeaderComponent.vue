@@ -1,17 +1,10 @@
 <template>
-  <div class="header bg-primary">
+  <div class="header bg-dark">
     <div>
-      <el-radio-group
-        @click="isMenu"
-        v-model="isCollapse"
-        style="margin-bottom: 20px"
-      >
-        <el-radio-button :label="false">expand</el-radio-button>
-        <el-radio-button :label="true">collapse</el-radio-button>
-      </el-radio-group>
+      <div @click="isMenu" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
-    <div></div>
-    <div></div>
   </div>
 </template>
 
@@ -25,16 +18,24 @@ const emits = defineEmits<{
 }>();
 
 const isMenu = () => {
-  clickCount.value++;
-  if (clickCount.value === 1) emits("showMenu", !isCollapse.value);
-  if (clickCount.value > 1) clickCount.value = 0;
+  isCollapse.value = !isCollapse.value;
+  emits("showMenu", !isCollapse.value);
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
   width: 100vw;
+  height: 100%;
   display: flex;
   flex-direction: row nowrap;
+}
+.menu-icon {
+  color: #fff;
+  height: 100%;
+  width: 30px;
+  margin-top: 50%;
+  margin-left: 50%;
+  cursor: pointer;
 }
 </style>

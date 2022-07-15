@@ -70,4 +70,11 @@ const handleClose = (key: string, keyPath: string[]) => {
   width: 300px;
   min-height: 100%;
 }
+
+.el-menu--collapsed {
+  width: calc(
+    var(--el-menu-icon-width) + var(--el-menu-base-level-padding) * 2
+  ) !important;
+  height: 100% !important;
+}
 </style>
