@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header bg-primary">
     <div>
       <el-radio-group
         @click="isMenu"
@@ -33,8 +33,8 @@ const isMenu = () => {
 
 <style lang="scss" scoped>
 .header {
+  width: 100vw;
   display: flex;
   flex-direction: row nowrap;
-  height: 6vh;
 }
 </style>

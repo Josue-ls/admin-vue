@@ -53,12 +53,17 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+$height: 91vh;
+.el-header {
+  --el-header-padding: 0px !important;
+  --el-header-height: 9vh !important;
+}
 .el-aside--open {
   overflow: auto;
   box-sizing: border-box;
   flex-shrink: 0;
   width: var(--el-aside-width, 300px);
-  height: 94vh;
+  height: $height;
   transition: all 0.5s;
 }
 
@@ -67,12 +72,12 @@ onMounted(() => {
   box-sizing: border-box;
   flex-shrink: 0;
   width: var(--el-aside-width, 70px);
-  height: 94vh;
+  height: $height;
   transition: all 0.5s;
 }
 
 .el-menu--collapsed {
   width: 70px;
-  height: 100%;
+  height: 100% !important;
 }
 </style>
